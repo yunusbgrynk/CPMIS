@@ -18,7 +18,7 @@ import com.yunus.webproject.service.UserService;
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-	// add a reference to our security data source
+	
 	@Autowired
 	private UserService userService;
 
@@ -40,19 +40,17 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	}
 
-	// beans
-	// bcrypt bean definition
 	@Bean
 	public BCryptPasswordEncoder passwordEncoder() {
 		return new BCryptPasswordEncoder();
 	}
 
-	// authenticationProvider bean definition
+
 	@Bean
 	public DaoAuthenticationProvider authenticationProvider() {
 		DaoAuthenticationProvider auth = new DaoAuthenticationProvider();
-		auth.setUserDetailsService(userService); // set the custom user details service
-		auth.setPasswordEncoder(passwordEncoder()); // set the password encoder - bcrypt
+		auth.setUserDetailsService(userService); 
+		auth.setPasswordEncoder(passwordEncoder()); 
 		return auth;
 	}
 
