@@ -1,7 +1,7 @@
 # CPMIS - Company Project Management and Information System
 Spring Web Project(Maven - Spring MVC/Security - Hibernate - JSP)
 	
-	Yunus Bagriyanik - Software Developer
+	Preparer : Yunus Bagriyanik - Software Developer
 
 About the project
 
