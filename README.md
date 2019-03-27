@@ -1,4 +1,4 @@
-# CPMIS
+# CPMIS - Company Project Management and Information System
 Spring Web Project(Maven - Spring MVC/Security - Hibernate - JSP)
 
 About the project
@@ -75,15 +75,15 @@ Packages & Layers in Encoding
 	
 Data Access Object (DAO)
 
-	Data Access Object (DAO) design template usage; access to the preferred database reduces the dependency of other layers to the database 
+Data Access Object (DAO) design template usage; access to the preferred database reduces the dependency of other layers to the database 
   by further abstracting the data storage and data retrieval process. The classes that simplify JDBC technology used to transaction in the database are found in DAO.
 
-	Layers created in the software architecture must have little dependency on each other, and other layers should not be affected if a layer needs to be replaced.
+Layers created in the software architecture must have little dependency on each other, and other layers should not be affected if a layer needs to be replaced.
   At this point it gives us many advantages. Depending on this, interdepartmental dependency is achieved through interface classes.
 
 Concept of Interface
 
-	The interface class allows us to determine what jobs the class does without the need to define how the methods are implemented. 
+The interface class allows us to determine what jobs the class does without the need to define how the methods are implemented. 
   Signature of method is released into the interfaces classes. Classes, after class definition can include interfaces which you wanted to use with implements keyword.
 
 If summarize; 
