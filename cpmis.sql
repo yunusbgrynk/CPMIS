@@ -23,47 +23,9 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (created_at,username,password,first_name,last_name,email,contact_number,country)
 VALUES 
-(now(),'yunusbgrynk','$2a$04$4IoAG2ggiiEdgRgl9XLqtujaBCLi3e3z2UEVQcScOayPp4Oj7.oju',
-'Yunus','Bagriyanik','yunusbgrynk@gmail.com','02124567878','TR'),
+(now(),'username','$2a$04$4IoAG2ggiiEdgRgl9XLqtujaBCLi3e3z2UEVQcScOayPp4Oj7.oju',
+'first_name','last_name','email@....com','contact','country')
 
-(now(),'hasan','$2a$04$4IoAG2ggiiEdgRgl9XLqtujaBCLi3e3z2UEVQcScOayPp4Oj7.oju',
-'Hasan','Bayram','hasan@yahoo.com','05302129025','TR'),
-
-(now(),'gizem','$2a$04$4IoAG2ggiiEdgRgl9XLqtujaBCLi3e3z2UEVQcScOayPp4Oj7.oju',
-'Gizem','Ay','gizemay@hotmail.com','05428907676','TR'),
-
-(now(),'azra','$2a$04$4IoAG2ggiiEdgRgl9XLqtujaBCLi3e3z2UEVQcScOayPp4Oj7.oju',
-'Azra','Yeni','azra_yeni@gmail.com','05322345656','TR'),
-
-(now(),'mustafa','$2a$04$4IoAG2ggiiEdgRgl9XLqtujaBCLi3e3z2UEVQcScOayPp4Oj7.oju',
-'Mustafa','Arda','mustafa@gmail.com','05315674343','TR'),
-
-(now(),'turgut21','$2a$04$4IoAG2ggiiEdgRgl9XLqtujaBCLi3e3z2UEVQcScOayPp4Oj7.oju',
-'Turgut','Turan','turgut@yahoo.com','05467878989','TR'),
-
-(now(),'basak','$2a$04$4IoAG2ggiiEdgRgl9XLqtujaBCLi3e3z2UEVQcScOayPp4Oj7.oju',
-'Basak','Icten','basak.sweety@gmail.com','05425676767','TR'),
-
-(now(),'canan','$2a$04$4IoAG2ggiiEdgRgl9XLqtujaBCLi3e3z2UEVQcScOayPp4Oj7.oju',
-'Canan','Kaymaz','canan@bgrynk.com','05408905454','TR'),
-
-(now(),'duygu','$2a$04$4IoAG2ggiiEdgRgl9XLqtujaBCLi3e3z2UEVQcScOayPp4Oj7.oju',
-'Duygu','Turk','duygu.turk@gmail.com','05559872121','TR'),
-
-(now(),'iboli','$2a$04$4IoAG2ggiiEdgRgl9XLqtujaBCLi3e3z2UEVQcScOayPp4Oj7.oju',
-'Ibrahim','Bagriyanik','ibrahim@yusuf.com','05542346767','TR'),
-
-(now(),'kaan','$2a$04$4IoAG2ggiiEdgRgl9XLqtujaBCLi3e3z2UEVQcScOayPp4Oj7.oju',
-'Kaan','Bulut','kaan@bulut.com','05592346767','TR'),
-
-(now(),'fikret','$2a$04$4IoAG2ggiiEdgRgl9XLqtujaBCLi3e3z2UEVQcScOayPp4Oj7.oju',
-'Fikret','Mavi','fikretmavi@yahoo.com','05542346767','TR'),
-
-(now(),'bora','$2a$04$4IoAG2ggiiEdgRgl9XLqtujaBCLi3e3z2UEVQcScOayPp4Oj7.oju',
-'Bora','Kemal','kemalbora@hotmail.com','05542346767','TR'),
-
-(now(),'fikret','$2a$04$4IoAG2ggiiEdgRgl9XLqtujaBCLi3e3z2UEVQcScOayPp4Oj7.oju',
-'Fikret','Mavi','fikretmavi@yahoo.com','05542346767','TR');
 
 DROP TABLE IF EXISTS `project`;
 
