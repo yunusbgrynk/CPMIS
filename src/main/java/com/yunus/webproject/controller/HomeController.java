@@ -40,7 +40,7 @@ public class HomeController {
 		List<User> theUsers = userService.getUsers();
 		theModel.addAttribute("user", theUsers);
 
-		return "systems";
+		return "home-page";
 	}
 
 	// With @RequestParam annotation we can access query parameter.
@@ -58,12 +58,12 @@ public class HomeController {
 
 		userService.saveUser(user);
 
-		return "redirect:/systems";
+		return "redirect:/home-page";
 	}
 
 	@GetMapping("/delete")
 	public String deleteUser(@RequestParam("userId") int theId) {
 		userService.deleteUser(theId);
-		return "redirect:/systems";
+		return "redirect:/home-page";
 	}
 }
