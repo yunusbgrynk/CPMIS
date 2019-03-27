@@ -27,23 +27,18 @@ import com.mchange.v2.c3p0.ComboPooledDataSource;
 @EnableWebMvc
 @EnableTransactionManagement
 @ComponentScan(basePackages = "com.yunus.webproject")
-@PropertySource("classpath:persistence-mysql.properties")
+@PropertySource("classpath:database.properties")
 public class AppConfig {
 
-	// set up variable to hold the properties
 	@Autowired
 	private Environment env;
 
-	// set up a logger for diagnostics
+	
 	private Logger logger = Logger.getLogger(getClass().getName());
 
 	@Bean
 	public ViewResolver viewResolver() {
 		InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
-
-		/*
-		 * Spring will refine and render the JSP files that we put under WEB-INF. To do this, ViewResolver is used.
-		 */
 
 		viewResolver.setPrefix("/WEB-INF/view/");
 		viewResolver.setSuffix(".jsp");
@@ -52,31 +47,30 @@ public class AppConfig {
 
 	}
 
-	// define a bean for our security datasource
+	
 	@Bean
 	public DataSource securityDataSource() {
 
-		// create connection pool
+		
 		ComboPooledDataSource securityDataSource = new ComboPooledDataSource();
 
-		// set the jdbc driver
+		
 		try {
 			securityDataSource.setDriverClass("com.mysql.jdbc.Driver");
 		} catch (PropertyVetoException exc) {
 			throw new RuntimeException(exc);
 		}
 
-		// for sanity's sake, let's log url and user ... just to make sure we are
-		// reading the data
+		
 		logger.info("jdbc.url=" + env.getProperty("jdbc.url"));
 		logger.info("jdbc.user=" + env.getProperty("jdbc.user"));
 
-		// set database connection props
+	
 		securityDataSource.setJdbcUrl(env.getProperty("jdbc.url"));
 		securityDataSource.setUser(env.getProperty("jdbc.user"));
 		securityDataSource.setPassword(env.getProperty("jdbc.password"));
 
-		// set connection pool props
+	
 		securityDataSource.setInitialPoolSize(getIntProperty("connection.pool.initialPoolSize"));
 
 		securityDataSource.setMinPoolSize(getIntProperty("connection.pool.minPoolSize"));
@@ -88,14 +82,13 @@ public class AppConfig {
 		return securityDataSource;
 	}
 
-	// need a helper method
-	// read environment property and convert to int
+
 
 	private int getIntProperty(String propName) {
 
 		String propVal = env.getProperty(propName);
 
-		// now convert to int
+	
 		int intPropVal = Integer.parseInt(propVal);
 
 		return intPropVal;
@@ -103,7 +96,7 @@ public class AppConfig {
 
 	private Properties getHibernateProperties() {
 
-		// set hibernate properties
+	
 		Properties props = new Properties();
 
 		props.setProperty("hibernate.dialect", env.getProperty("hibernate.dialect"));
@@ -115,10 +108,10 @@ public class AppConfig {
 	@Bean
 	public LocalSessionFactoryBean sessionFactory() {
 
-		// create session factorys
+	
 		LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
 
-		// set the properties
+	
 		sessionFactory.setDataSource(securityDataSource());
 		sessionFactory.setPackagesToScan(env.getProperty("hiberante.packagesToScan"));
 		sessionFactory.setHibernateProperties(getHibernateProperties());
@@ -130,7 +123,7 @@ public class AppConfig {
 	@Autowired
 	public HibernateTransactionManager transactionManager(SessionFactory sessionFactory) {
 
-		// setup transaction manager based on session factory
+
 		HibernateTransactionManager txManager = new HibernateTransactionManager();
 		txManager.setSessionFactory(sessionFactory);
 
@@ -139,8 +132,3 @@ public class AppConfig {
 
 }
 
-/*
- *The @Configuration notation reports that the class has an adjustment class.
-  @ComponentScan (value = {ve myPackage value}) is the expression that scans the packages that are given to them as values ​​and makes the necessary installations.
- * The SpringSecurityInitializer class, which is the task of installing SpringSecurityFilterChain, does its job with this notation.
- */
