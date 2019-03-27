@@ -20,8 +20,3 @@ public class SpringMvcDispatcherServletInitializer extends AbstractAnnotationCon
 	}
 
 }
-
-/*
- * The SpringMvcInitializer class fulfills the task of installing the 
- * DispatcherServlet, which is required for the project to run.
- */
