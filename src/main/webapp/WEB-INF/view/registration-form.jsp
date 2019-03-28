@@ -45,12 +45,12 @@
 						action="${pageContext.request.contextPath}/register/processRegistrationForm"
 						modelAttribute="registerUser" class="form-horizontal">
 
-						<!-- Place for messages: error. -->
+					
 						<div class="form-group">
 							<div class="col-xs-15">
 								<div>
 
-									<!-- Check for registration error -->
+								
 									<c:if test="${registrationError != null}">
 
 										<div class="alert alert-danger col-xs-offset-1 col-xs-10">
@@ -62,7 +62,7 @@
 							</div>
 						</div>
 
-						<!-- User name -->
+					
 						<div style="margin-bottom: 25px" class="input-group">
 							<span class="input-group-addon"><i
 								class="glyphicon glyphicon-user"></i></span>
@@ -71,7 +71,6 @@
 								class="form-control" />
 						</div>
 
-						<!-- Password -->
 						<div style="margin-bottom: 25px" class="input-group">
 							<span class="input-group-addon"><i
 								class="glyphicon glyphicon-lock"></i></span>
@@ -80,7 +79,6 @@
 								class="form-control" />
 						</div>
 
-						<!-- Confirm Password -->
 						<div style="margin-bottom: 25px" class="input-group">
 							<span class="input-group-addon"><i
 								class="glyphicon glyphicon-lock"></i></span>
@@ -89,8 +87,6 @@
 								placeholder="confirm password (*)" class="form-control" />
 						</div>
 
-
-						<!-- First name -->
 						<div style="margin-bottom: 25px" class="input-group">
 							<span class="input-group-addon"><i
 								class="glyphicon glyphicon-user"></i></span>
@@ -99,7 +95,7 @@
 								class="form-control" />
 						</div>
 
-						<!-- Last name -->
+				
 						<div style="margin-bottom: 25px" class="input-group">
 							<span class="input-group-addon"><i
 								class="glyphicon glyphicon-user"></i></span>
@@ -108,7 +104,7 @@
 								class="form-control" />
 						</div>
 
-						<!-- Email -->
+			
 						<div style="margin-bottom: 25px" class="input-group">
 							<span class="input-group-addon"><i
 								class="glyphicon glyphicon-user"></i></span>
@@ -141,7 +137,7 @@
 
 
 
-						<!-- Register Button -->
+			
 						<div style="margin-top: 10px" class="form-group">
 							<div class="col-sm-6 controls">
 								<button type="submit" class="btn btn-danger">Register</button>
