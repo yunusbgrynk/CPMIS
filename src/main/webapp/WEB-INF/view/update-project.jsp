@@ -10,7 +10,6 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<!-- Reference Bootstrap files -->
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script
@@ -76,7 +75,6 @@
 
 				<div style="padding-top: 30px" class="panel-body">
 
-					<!-- Registration Form -->
 					<form:form
 						action="${pageContext.request.contextPath}/project/processSaveProject"
 						modelAttribute="project" class="form-horizontal">
@@ -107,10 +105,6 @@
 								class="form-control" />
 						</div>
 
-
-
-
-						<!-- Register Button -->
 						<div style="margin-top: 10px" class="form-group">
 							<div class="col-sm-6 controls">
 								<button type="submit" class="btn btn-info">Save</button>
