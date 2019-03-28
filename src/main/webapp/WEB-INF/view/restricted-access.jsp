@@ -1,12 +1,12 @@
 <html>
 
 <head>
-	<title> ERROR - Access Denied</title>
+	<title> ERROR </title>
 </head>
 
 <body>
 
-	<h2>Access Denied - You are not authorized to access this resource.</h2>
+	<h2>You have been redirected to the restricted access page..</h2>
 
 	<hr>
 	
